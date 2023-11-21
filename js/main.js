@@ -10,8 +10,10 @@ Ogni membro è caratterizzato dalle seguenti informazioni:
 
 MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.
+
 MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
@@ -64,4 +66,20 @@ const team = [
   },
 ];
 
-console.log(team);
+//milestone 1
+
+const arrayLength = team.length;
+
+for (let i = 0; i < arrayLength; i++) {
+  const person = team[i];
+
+  console.log(`Team Member ${i + 1}`);
+
+  for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
+  }
+
+  if (!(i === arrayLength - 1)) {
+    console.log(`---`);
+  }
+}
